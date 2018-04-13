@@ -1,0 +1,7 @@
+<p appPane id="4"></p>
+<p appPane id="5"></p>
+<p appPane id="6" *ngIf="shouldShow"></p>
+
+<button (click)="show()">Show #3 Pane</button>
+
+<div>Panes: {{serializedPanes}}</div>

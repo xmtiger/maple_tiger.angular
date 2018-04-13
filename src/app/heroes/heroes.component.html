@@ -1,0 +1,7 @@
+{{hero}}
+<br>
+<div>
+    <!--div *ngIf="message">The Last Message: {{message.msg}}</div-->
+    
+    <div *ngFor="let msg of messages" >The each message: {{msg.msg}} and {{msg.data}}</div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4 col-md-3 col-lg-3">
+      <br>
+      <div style="height: 350px; min-height:50%; max-height:90%; border:1px solid black; overflow:auto;">
+        <app-ztree></app-ztree>
+      </div>
+      
+    </div> 
+    <div class="col-sm-8 col-md-9 col-lg-9">
+      <mat-tab-group>
+        <!--mat-tab label={{tabs[0].title}}>{{tabs[0].content}}</mat-tab>
+        <mat-tab label={{tabs[1].title}}>{{tabs[1].content}}</mat-tab-->
+        <div *ngFor="let tab of tabs">
+            <mat-tab label={{tab.title}}>
+              {{tab.content}}
+              <tr *ngFor="let department of departments">
+                <td>id: {{department.id}}</td>
+                <td>name: {{department.name}}</td>
+              </tr>
+            </mat-tab>
+        </div>       
+      </mat-tab-group>
+    </div>
+  </div>
+  
+</div>
